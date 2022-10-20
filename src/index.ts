@@ -9,8 +9,8 @@ app.use(json())
 app.use(corsConfig)
 app.use(mainRouter)
 
-app.listen(3000, () => {
-  console.log('server is running')
-})
+// app.listen(3000, () => {
+//   console.log('server is running')
+// })
 
-//export default app
+export default app
