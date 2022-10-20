@@ -7,9 +7,7 @@ export class DeleteUserService{
     const usersRepository = connection.getRepository(User)
 
     const user = await usersRepository.findOneBy({email: userEmail})
-    console.log('userEmail: ' + userEmail)
-    console.log('user: ' + user)
-
+    
     if(!user){
       await connection.destroy()
       return new Error('user not found')
