@@ -10,7 +10,6 @@ export class User{
   email: string
 
   @Column({
-    select: false,
     transformer: hashPasswordTransform
   })
   password: string
