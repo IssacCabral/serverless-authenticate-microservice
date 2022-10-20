@@ -1,9 +1,9 @@
 import { Router } from "express";
+import usersRoutes from "./users-routes";
 
 const mainRouter = Router()
 
-mainRouter.get('/', (req, res) => {
-  return res.json({message: 'Olá amegan'})
-})
+mainRouter
+  .use(usersRoutes)
 
 export default mainRouter
