@@ -1,3 +1,4 @@
+import "reflect-metadata"
 import express, {json} from 'express'
 import corsConfig from './config/corsConfig'
 import mainRouter from './routes/main-router'
