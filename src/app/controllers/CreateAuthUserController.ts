@@ -28,8 +28,9 @@ export class CreateAuthUserController {
       return response.status(400).json({message: 'invalid credentials'})
     }
 
+    await connection.destroy()
     const accessToken = jwt.sign({email}, env.SECRET_JWT_KEY!, {expiresIn: '3d'})
-    
+
     return response.status(200).json({
       accessToken,
       userEmail: email
